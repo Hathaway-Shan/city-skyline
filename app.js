@@ -1,8 +1,12 @@
 // import needed modules
 
 // state
-// resets the base page load
-
+const city = {
+    skyline: 'Sunny City'
+    background: 'Neutral'
+    name: 'New City'
+    slogan: []
+}
 
 
 //city inputs section root element
@@ -14,6 +18,14 @@ const shareButton = inputSection.querySelector('button');
 //children that share a class can be entered into an array
 const [citySelect, themeSelect] = inputSection.querySelector('select');
 //add event listeners to define undefined constants
+
+//city image builder root element
+const displaySection = document.getElementById('image-display');
+//displaySection children
+const cityName = displaySection.querySelector('h2');
+const cityImage = displaySection.querySelector('img');
+const citySlogan = displaySection.querySelector('p');
+
 nameInput.addEventListener('input', () => {
 
 });
@@ -30,15 +42,18 @@ shareButton.addEventListener('click', () => {
 
 });
 
+function cityDisplay() {
+    city.name = cityName.value;
+    city.skyline = cityImage.value;
+    city.slogan = citySlogan.value;
+}
 
-//city image builder root element
-const displaySection = document.getElementById('image-display');
-//displaySection children
-const cityName = displaySection.querySelector('h2');
-const cityImage = displaySection.querySelector('img');
-const citySlogan = displaySection.querySelector('p');
+// nameInput.value = city.name;
+// sloganInput.value = city.slogan;
+// themeSelect.value = city.theme;
+// citySelect.value = city.skyline;
 
 // function newCity () {
-//     cityDisplay.classList.value = '';
-//     cityDisplay.classList.add(city.background);
+    
+
 // }
