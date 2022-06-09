@@ -1,13 +1,57 @@
 /* add css for index.html */
 main {
-    grid-template-columns: 50% 50%;
-    align-items: center;
-    grid-gap: 30px;
+    display: grid;
+    background: url('https://alamedahistory.files.wordpress.com/2021/02/pittmons-1915-map-detail.png') blue no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-#image-display-select {
+@media (min-width: 400px) {
+    main {
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+        text-align: center;
+    }
+}
+
+#image-select {
+    background-color: #869291;
+    padding: 20px;
+    border: 8px solid rgb(85, 89, 90)
+}
+
+#image-display {
+    justify: center;
+}
+
+label, input, select, textarea {
     display: block;
     width: 100%;
     margin-bottom: 10px;
-    
 }
+
+    .neutral {
+        background: #e19a36;
+        color: #49281F;
+        border: 8px solid #894b18;
+        font-family: 'Gwendolyn';
+        font-size: 1.4rem;
+    }
+    
+    .moody {
+        background: #240047;
+        color: #4b5453;
+        border: 3px solid #1b4751;
+        font-family: 'Concert One';
+        font-size: 1.0rem;
+    }
+    
+    .bright {
+        background: #ccc536;
+        color: #c79d4a;
+        border: 3px solid #c199a1;
+        font-family: 'Space Grotesk';
+        font-size: 0.9rem;
+    }
