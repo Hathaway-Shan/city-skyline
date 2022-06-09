@@ -15,10 +15,50 @@
 <body>
     <header>
         <img src="assets/html_css_js.png">
-        <h1>Web UI Project</h1>
+        <h1>We Built This City</h1>
     </header>
 
     <main>
+<!-- inputs section -->
+        <section id="image-select">
+            
+            <h2>subheader</h2>
+<!-- city name text display input -->
+            <label for="name-input">Name your city</label>
+            <input id="name-input" value="Sim City">
+<!-- image switcher first dropdown -->
+            <label for="image-select">Choose your skyline</label>
+            <select id="iamge-select">
+                <option value="sun-city">Sunny City</option>
+                <option value="dark-city">Dark City</option>
+                <option value="winter-city">Winter City</option>
+            </select>
+<!-- Theme switcher second dropdown -->
+            <label for="background-select">Choose a Theme!</label>
+            <select id="background-select">
+                <option value="moody">Moody</option>
+                <option value="bright">Bright</option>
+                <option value="neutral">Neutral</option>
+            </select>
+<!-- City slogan text entry -->
+            <label for="slogan-input">Give your city a slogan</label>
+            <textarea id="slogan-input"></textarea>
+<!-- City slogan button to add to array -->
+            <button>share slogan</button>
+
+        </section>
+<!-- image and background display section -->
+        <section id="image-background-display" class="neutral">
+<!-- header targeted by text display input -->
+            <h2>New City</h2>
+<!-- image targeted by image switcher -->
+            <img src="assets/city-sun.png">
+<!-- textarea targeted by City slogan entry -->
+            <p>
+                Welcome to our fair city!
+            </p>
+
+        </section>
 
     </main>
 

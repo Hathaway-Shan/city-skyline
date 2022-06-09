@@ -15,4 +15,4 @@
 
 // page load actions
 
-
+// querySelect will only accept and html element, class, or id

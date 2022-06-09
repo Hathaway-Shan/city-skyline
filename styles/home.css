@@ -1,1 +1,13 @@
 /* add css for index.html */
+main {
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    grid-gap: 30px;
+}
+
+#image-display-select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
