@@ -1,18 +1,44 @@
 // import needed modules
 
 // state
+// resets the base page load
 
-// components
-    // component
-    // define and grab DOM elements
-    // display functions
-    // optional: subscribe to events
-        // event handlers - what needs to happen?
-        // logic and calculations
-        // state update
-        // re-display components (which ones?)
-    // optional: handle functions for shared event handler logic
 
-// page load actions
 
-// querySelect will only accept and html element, class, or id
+//city inputs section root element
+const inputSection = document.getElementById('image-select');
+//inputSection children can be querySelected from root element 
+const nameInput = inputSection.querySelector('input');
+const sloganInput = inputSection.querySelector('textarea');
+const shareButton = inputSection.querySelector('button');
+//children that share a class can be entered into an array
+const [citySelect, themeSelect] = inputSection.querySelector('select');
+//add event listeners to define undefined constants
+nameInput.addEventListener('input', () => {
+
+});
+sloganInput.addEventListener('input', () => {
+
+});
+citySelect.addEventListener('select', () => {
+
+});
+themeSelect.addEventListener('select', () => {
+
+});
+shareButton.addEventListener('click', () => {
+
+});
+
+
+//city image builder root element
+const displaySection = document.getElementById('image-display');
+//displaySection children
+const cityName = displaySection.querySelector('h2');
+const cityImage = displaySection.querySelector('img');
+const citySlogan = displaySection.querySelector('p');
+
+// function newCity () {
+//     cityDisplay.classList.value = '';
+//     cityDisplay.classList.add(city.background);
+// }
