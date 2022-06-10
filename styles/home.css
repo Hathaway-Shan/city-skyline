@@ -1,6 +1,7 @@
 /* add css for index.html */
 main {
     display: grid;
+/* this is the map image on the back of the page */
     background: url('https://alamedahistory.files.wordpress.com/2021/02/pittmons-1915-map-detail.png') blue no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -31,7 +32,26 @@ label, input, select, textarea {
     width: 100%;
     margin-bottom: 10px;
 }
+/* this code contains the image overlay display */
+.container {
+    position: relative;
+}
 
+div {
+    display: grid;
+    place-items: center;
+}
+
+.back-image {
+    width: 100px;
+    width: 500px;
+    height: 400px;
+}
+
+.top-image {
+    position: absolute;
+}
+/* these are the background themes */
     .neutral {
         background: #e19a36;
         color: #49281F;

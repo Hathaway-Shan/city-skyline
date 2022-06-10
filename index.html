@@ -36,9 +36,9 @@
 <!-- Theme switcher second dropdown -->
             <label for="background-select">Choose a Theme!</label>
             <select id="background-select">
-                <option value="moody">Moody</option>
-                <option value="bright">Bright</option>
-                <option value="neutral">Neutral</option>
+                <option value="moody" src="assets/moody-back.png">Moody</option>
+                <option value="bright" src="assets/sunny-back.png">Bright</option>
+                <option value="neutral" src="assets/neutral-back.png">Neutral</option>
             </select>
 <!-- City slogan text entry -->
             <label for="slogan-input">Give your city a slogan</label>
@@ -51,8 +51,11 @@
         <section id="image-background-display" class="neutral">
 <!-- header targeted by text display input -->
             <h2>New City</h2>
-<!-- image targeted by image switcher -->
-            <img src="assets/city-sun.png">
+            <div class="container">
+                <!-- image targeted by image switcher -->
+                <img class="top-image" src="assets/city-sun.png">
+                <img class="back-image" src="assets/sunny-back.png">
+            </div>
 <!-- textarea targeted by City slogan entry -->
             <p>
                 Welcome to our fair city!

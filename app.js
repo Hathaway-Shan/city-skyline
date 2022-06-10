@@ -32,6 +32,7 @@ const [citySelect, backgroundSelect] = inputSection.querySelectorAll('select');
 let cityName = backgroundDisplay.querySelector('h2');
 let cityImage = backgroundDisplay.querySelector('img');
 let citySlogan = backgroundDisplay.querySelector('p');
+let cityBackground = 
 
 nameInput.addEventListener('input', () => {
     city.name = nameInput.value;
@@ -64,7 +65,8 @@ function newCity() {
     //displays new selections and inputs
     backgroundDisplay.classList.add(city.background);
     cityName.textContent = city.name;
-    //uses backticks 
+    
+    //use backticks for images
     cityImage.src = `./assets/${city.skyline}.png`;
     citySlogan.textContent = city.slogan;
     console.log(cityImage.src);
@@ -80,8 +82,6 @@ function displayCity() {
 // sloganInput.value = city.slogan;
 // themeSelect.value = city.theme;
 // citySelect.value = city.skyline;
-
-// function newCity () {
     
 
 // }
