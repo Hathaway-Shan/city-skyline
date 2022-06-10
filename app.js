@@ -3,20 +3,21 @@
 // state
 function getDefaultCity() {
     let city = {
-        skyline: cityImage,
-        background: 'Neutral',
+        skyline: '',
+        background: 'neutral',
         name: 'New City',
-        slogan: [],
+        slogan: '',
     };
     return city;
 }
+
 let city = getDefaultCity();
 
 
 
 
 //city inputs section root element
-const inputSection = document.getElementById('image-select');
+const inputSection = document.getElementById('input-selection');
 //inputSection children can be querySelected from root element 
 const nameInput = inputSection.querySelector('input');
 const sloganInput = inputSection.querySelector('textarea');
@@ -57,6 +58,7 @@ backgroundSelect.addEventListener('select', () => {
 function newCity() {
     //clears previous state
     console.log(city.skyline);
+    console.log(city.slogan);
     //city.skyline holds initial value from object
     backgroundDisplay.classList.value = '';
     //displays new selections and inputs
@@ -68,7 +70,7 @@ function newCity() {
     console.log(cityImage.src);
 }
 
-function cityDisplay(cityName, citySlogan) {
+function cityDisplay() {
     city.name = cityName.value;
     city.skyline = cityImage.value;
     city.slogan = citySlogan.value;
