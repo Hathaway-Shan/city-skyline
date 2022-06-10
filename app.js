@@ -3,8 +3,8 @@
 // state
 function getDefaultCity() {
     let city = {
-        skyline: '',
-        background: 'neutral',
+        skyline: 'city-sun',
+        background: 'neutral-back',
         name: 'New City',
         slogan: '',
     };
@@ -27,12 +27,12 @@ const backgroundDisplay = document.getElementById('image-background-display')
 //children that share a class can be entered into an array
 const [citySelect, backgroundSelect] = inputSection.querySelectorAll('select');
 //add event listeners to define undefined constants
-
+const [cityImage, backgroundImage] = backgroundDisplay.querySelectorAll('img');
 //displaySection children
 let cityName = backgroundDisplay.querySelector('h2');
-let cityImage = backgroundDisplay.querySelector('img');
+// let cityImage = backgroundDisplay.querySelector('img');
 let citySlogan = backgroundDisplay.querySelector('p');
-let cityBackground = 
+// let backgroundImage = document.getElementsByClassName('back-image');
 
 nameInput.addEventListener('input', () => {
     city.name = nameInput.value;
@@ -43,7 +43,7 @@ sloganInput.addEventListener('input', () => {
     newCity();
 });
 citySelect.addEventListener('change', () => {
-    
+    console.log(citySelect.value);
     city.skyline = citySelect.value;
     newCity();
     
@@ -60,16 +60,17 @@ backgroundSelect.addEventListener('change', () => {
 function newCity() {
     //clears previous state
     console.log(city.skyline);
+    console.log(city.background);
     //city.skyline holds initial value from object
     backgroundDisplay.classList.value = '';
     //displays new selections and inputs
-    backgroundDisplay.classList.add(city.background);
     cityName.textContent = city.name;
-    
-    //use backticks for images
-    cityImage.src = `./assets/${city.skyline}.png`;
     citySlogan.textContent = city.slogan;
-    console.log(cityImage.src);
+    //use backticks for images
+    backgroundImage.src = `./assets/${city.background}.png`;
+    cityImage.src = `./assets/${city.skyline}.png`;
+    // backgroundDisplay.classList.add(city.background);
+    
 }
 
 function displayCity() {
