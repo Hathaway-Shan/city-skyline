@@ -23,11 +23,10 @@ const nameInput = inputSection.querySelector('input');
 const sloganInput = inputSection.querySelector('textarea');
 const backgroundDisplay = document.getElementById('image-background-display')
 // const shareButton = inputSection.querySelector('button');
-//children that share a class can be entered into an array
-const [citySelect, backgroundSelect] = inputSection.querySelector('select');
-//add event listeners to define undefined constants
 
-//city image builder root element
+//children that share a class can be entered into an array
+const [citySelect, backgroundSelect] = inputSection.querySelectorAll('select');
+//add event listeners to define undefined constants
 
 //displaySection children
 let cityName = backgroundDisplay.querySelector('h2');
@@ -42,11 +41,13 @@ sloganInput.addEventListener('input', () => {
     city.slogan = sloganInput.value;
     newCity();
 });
-citySelect.addEventListener('select', () => {
+citySelect.addEventListener('change', () => {
+    
     city.skyline = citySelect.value;
     newCity();
+    
 });
-backgroundSelect.addEventListener('select', () => {
+backgroundSelect.addEventListener('change', () => {
     city.background = backgroundSelect.value;
     newCity();
 });
@@ -58,7 +59,6 @@ backgroundSelect.addEventListener('select', () => {
 function newCity() {
     //clears previous state
     console.log(city.skyline);
-    console.log(city.slogan);
     //city.skyline holds initial value from object
     backgroundDisplay.classList.value = '';
     //displays new selections and inputs
@@ -70,12 +70,12 @@ function newCity() {
     console.log(cityImage.src);
 }
 
-function cityDisplay() {
+function displayCity() {
     city.name = cityName.value;
     city.skyline = cityImage.value;
     city.slogan = citySlogan.value;
 }
-
+//
 // nameInput.value = city.name;
 // sloganInput.value = city.slogan;
 // themeSelect.value = city.theme;
