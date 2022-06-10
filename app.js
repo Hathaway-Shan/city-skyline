@@ -3,7 +3,7 @@
 // state
 function getDefaultCity() {
     let city = {
-        skyline: 'Sunny City',
+        skyline: cityImage,
         background: 'Neutral',
         name: 'New City',
         slogan: [],
@@ -65,6 +65,7 @@ function newCity() {
     //uses backticks 
     cityImage.src = `./assets/${city.skyline}.png`;
     citySlogan.textContent = city.slogan;
+    console.log(cityImage.src);
 }
 
 function cityDisplay(cityName, citySlogan) {
