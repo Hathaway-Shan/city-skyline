@@ -14,7 +14,7 @@ function getDefaultCity() {
 }
 //set a new variable city equal to getDefaultCity function
 let city = getDefaultCity();
-//Empty array for the share button to push to
+//Empty array for the share button to push toward
 let cities = [];
 
 //city inputs section root element
@@ -61,11 +61,9 @@ shareButton.addEventListener('click', () => {
     cities.push(city);
 //display new cities list
     displayCities();
-//reset the original city display
+//reset the original city display and text values
     city = getDefaultCity();
     resetCityText();
-//reset display functions 
-    // defaultDisplay();
     newCity();
 });
 
@@ -77,29 +75,33 @@ function newCity() {
 //use backticks for images
     backgroundImage.src = `./assets/${city.background}.png`;
     cityImage.src = `./assets/${city.skyline}.png`;
+//there is not currently a select for this but it breaks the background without this line
     backgroundDisplay.classList.add(city.theme);
     
 }
 
+//resets the text boxes to empty strings
 function resetCityText() {
     nameInput.value = '';
     sloganInput.value = '';
 }
 
+//creates a constant for our blank <ul> in the html
 const displaySection = document.getElementById('slogan-text-area');
 const list = displaySection.querySelector('ul');
 
 function displayCities() {
-//
+//set the HTML content of our <ul> in list to an empty string
     list.innerHTML = '';
 //iterate through the state of the object
     for (const city of cities) {
-//creates a new list 
+//creates a new list item
         const li = document.createElement('li');
-//create new spans that read the properties of a new city
+// this is just here to make the city name and slogan display with a :space between them
         const spacer = ': ';
+//create new spans that read the properties of the created new city
         const cityName = document.createElement('span');
-        cityName.textContent = city.name;
+        cityName.textContent = city.name; 
         const citySlogan = document.createElement('span');
         citySlogan.textContent = city.slogan;
 //add new spans to new li element
@@ -108,3 +110,4 @@ function displayCities() {
         list.append(li);
     } 
 }
+// page load actions are taken care of by the scope of line 16
