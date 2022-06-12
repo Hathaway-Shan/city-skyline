@@ -30,7 +30,6 @@ const [citySelect, backgroundSelect] = inputSection.querySelectorAll('select');
 const [cityImage, backgroundImage] = backgroundDisplay.querySelectorAll('img');
 //displaySection children
 let cityName = backgroundDisplay.querySelector('h2');
-// let citySlogan = backgroundDisplay.querySelector('ul');
 
 //eventListener section
 nameInput.addEventListener('input', () => {
@@ -53,32 +52,28 @@ backgroundSelect.addEventListener('change', () => {
 });
 
 shareButton.addEventListener('click', () => {
-    sloganSum();
+//
+    const slogan = sloganInput.value;
+    if (!slogan) {
+        return;
+    }
 //add created object to array
     cities.push(city);
 //display new cities list
     displayCities();
 //reset the original city display
-    city = newCity();
+    city = getDefaultCity();
+    resetCityText();
 //reset display functions 
     // defaultDisplay();
     newCity();
 });
-
-function sloganSum() {
-    const slogan = sloganInput.value;
-    if (!slogan) {
-        return;
-    }
-} 
-
 
 function newCity() {
 //clears previous state
     backgroundDisplay.classList.value = '';
 //displays new selections and inputs
     cityName.textContent = city.name;
-    // citySlogan.textContent = city.slogan;
 //use backticks for images
     backgroundImage.src = `./assets/${city.background}.png`;
     cityImage.src = `./assets/${city.skyline}.png`;
@@ -86,12 +81,10 @@ function newCity() {
     
 }
 
-// function resetCity() {
-//     getDefaultCity();
-//     cityName.value = city.name;
-//     cityImage.value = city.skyline;
-//     city.Slogan = city.slogan;
-// }
+function resetCityText() {
+    nameInput.value = '';
+    sloganInput.value = '';
+}
 
 const displaySection = document.getElementById('slogan-text-area');
 const list = displaySection.querySelector('ul');
@@ -115,10 +108,3 @@ function displayCities() {
         list.append(li);
     } 
 }
-function defaultDisplay() {
-    var inputValues = document.getElementById('image-selector');
-    var inputs = inputValues.innerHTML;
-    inputValues.innerHTML = inputs;
-    console.log('refreshed');
-}
-// }
