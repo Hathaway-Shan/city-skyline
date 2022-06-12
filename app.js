@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // import needed modules
 
 // state
@@ -60,6 +61,7 @@ shareButton.addEventListener('click', () => {
 //reset the original city display
     city = newCity();
 //reset display functions 
+    // defaultDisplay();
     newCity();
 });
 
@@ -84,11 +86,12 @@ function newCity() {
     
 }
 
-function resetCity() {
-    cityName.value = city.name;
-    cityImage.value = city.skyline;
-    city.Slogan = city.slogan;
-}
+// function resetCity() {
+//     getDefaultCity();
+//     cityName.value = city.name;
+//     cityImage.value = city.skyline;
+//     city.Slogan = city.slogan;
+// }
 
 const displaySection = document.getElementById('slogan-text-area');
 const list = displaySection.querySelector('ul');
@@ -112,7 +115,10 @@ function displayCities() {
         list.append(li);
     } 
 }
-
-    
-
+function defaultDisplay() {
+    var inputValues = document.getElementById('image-selector');
+    var inputs = inputValues.innerHTML;
+    inputValues.innerHTML = inputs;
+    console.log('refreshed');
+}
 // }
