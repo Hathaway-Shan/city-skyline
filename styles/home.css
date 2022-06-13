@@ -51,6 +51,26 @@ div {
 .top-image {
     position: absolute;
 }
+
+#slogan-text-area {
+    grid-area: phrases;
+}
+
+.slogan-display {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.slogan-display li {
+    position: relative;
+    background-color: aqua;
+    border: 1px;
+    border-color: black;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0 10px 20px;
+}
+
 /* these are the background themes */
     .neutral {
         background: #e19a36;
@@ -58,20 +78,4 @@ div {
         border: 8px solid #894b18;
         font-family: 'Gwendolyn';
         font-size: 1.4rem;
-    }
-    
-    .moody {
-        background: #240047;
-        color: #4b5453;
-        border: 3px solid #1b4751;
-        font-family: 'Concert One';
-        font-size: 1.0rem;
-    }
-    
-    .bright {
-        background: #ccc536;
-        color: #c79d4a;
-        border: 3px solid #c199a1;
-        font-family: 'Space Grotesk';
-        font-size: 0.9rem;
     }
