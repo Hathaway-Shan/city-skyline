@@ -51,7 +51,7 @@ div {
 .top-image {
     position: absolute;
 }
-
+/* this code deals with the properties of the text display section under the image */ 
 #slogan-text-area {
     grid-area: phrases;
 }
