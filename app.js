@@ -66,9 +66,10 @@ shareButton.addEventListener('click', () => {
     newCity();
 });
 
-const cityNum = document.getElementById('city-count');
+let cityNum = document.getElementById('city-count');
 
 function cityCount() {
+    
     let counter = 0;
     for (let i = 0; i < cities.length; i++) {
         if (cities[i].status === '0') counter++;
