@@ -66,13 +66,15 @@ shareButton.addEventListener('click', () => {
     newCity();
 });
 
-const cityNum = backgroundDisplay.querySelector('span');
+const cityNum = document.getElementById('city-count');
 
 function cityCount() {
-    for (let index = 0; index < cities.length; index++) {
-        cityNum.value = cities[index];
-        
+    let counter = 0;
+    for (let i = 0; i < cities.length; i++) {
+        if (cities[i].status === '0') counter++;
     }
+    cityNum.textContent = counter;
+    console.log(counter);
 }
 
 const pushButton = backgroundDisplay.querySelector('button');
@@ -133,4 +135,6 @@ function displayCities() {
         list.append(li);
     } 
 }
+
+
 // page load actions are taken care of by the scope of line 16
