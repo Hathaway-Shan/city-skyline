@@ -16,16 +16,13 @@ function getDefaultCity() {
 let city = getDefaultCity();
 //Empty array for the share button to push toward
 let cities = [];
-let slogans = [];
-// let length = cities.length;
-
 
 //city inputs section root element
 const inputSection = document.getElementById('input-selection');
 //inputSection children can be querySelected from root element 
 const nameInput = inputSection.querySelector('input');
 const sloganInput = inputSection.querySelector('textarea');
-const shareButton = inputSection.querySelector('button');
+const sloganDisplay = document.getElementById('slogan-display');
 
 //children that share a class can be entered into an array to call them in order from left to right
 const backgroundDisplay = document.getElementById('image-background-display');
@@ -41,6 +38,7 @@ nameInput.addEventListener('input', () => {
 });
 sloganInput.addEventListener('input', () => {
     city.slogan = sloganInput.value;
+    sloganDisplay.textContent = sloganInput.value;
     
     newCity();  
 });
@@ -53,29 +51,11 @@ backgroundSelect.addEventListener('change', () => {
     city.background = backgroundSelect.value;
     newCity();
 });
-
-shareButton.addEventListener('click', () => {
-//
-    const slogan = sloganInput.value;
-    if (!slogan) {
-        return;
-    }
-    city.slogan.push(slogans);
-    
-    displayCities();
-    newCity();
-});
-
+// takes the value of the length of the cities array and displays it at city-count
 let cityNum = document.getElementById('city-count');
 
 function cityCount() {
-    
-    let counter = 0;
-    for (let i = 0; i < cities.length; i++) {
-        if (cities[i].status === '0') counter++;
-    }
-    cityNum.textContent = counter;
-    console.log(counter);
+    cityNum.textContent = cities.length;
 }
 
 const pushButton = backgroundDisplay.querySelector('button');
