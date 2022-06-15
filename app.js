@@ -16,9 +16,8 @@ function getDefaultCity() {
 let city = getDefaultCity();
 //Empty array for the share button to push toward
 let cities = [];
-let length = cities.length;
-
-const cityCount = backgroundDisplay.querySelector('span');
+let slogans = [];
+// let length = cities.length;
 
 
 //city inputs section root element
@@ -61,9 +60,20 @@ shareButton.addEventListener('click', () => {
     if (!slogan) {
         return;
     }
+    city.slogan.push(slogans);
+    
     displayCities();
     newCity();
 });
+
+const cityNum = backgroundDisplay.querySelector('span');
+
+function cityCount() {
+    for (let index = 0; index < cities.length; index++) {
+        cityNum.value = cities[index];
+        
+    }
+}
 
 const pushButton = backgroundDisplay.querySelector('button');
 
@@ -72,6 +82,7 @@ pushButton.addEventListener('click', () => {
     cities.push(city);
 //display new cities list
     displayCities();
+    cityCount();
 //reset the original city display and text values
     city = getDefaultCity();
     resetCityText();
