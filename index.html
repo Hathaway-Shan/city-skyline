@@ -15,10 +15,55 @@
 <body>
     <header>
         <img src="assets/html_css_js.png">
-        <h1>Web UI Project</h1>
+        <h1>We Built This City</h1>
     </header>
 
     <main>
+<!-- inputs section -->
+        <section id="input-selection">
+            
+            <h2>What's Your City?</h2>
+<!-- city name text display input -->
+            <label for="name-input">Name your city</label>
+            <input id="name-input" value="">
+<!-- image switcher first dropdown -->
+            <label for="image-select">Choose your skyline</label>
+            <select id="image-selector">
+                <option value="city-sun" src="assets/city-sun.png">Sunny City</option>
+                <option value="city-darkpng" src="assets/city-darkpng.png">Dark City</option>
+                <option value="city-snow" src="assets/city-snow.png">Winter City</option>
+            </select>
+<!-- background switcher second dropdown -->
+            <label for="background-select">Choose a Setting!</label>
+            <select id="background-select">
+                <option value="sunny-back" src="assets/sunny-back.png">Bright</option>
+                <option value="moody-back" src="assets/moody-back.png">Moody</option>
+                <option value="neutral-back" src="assets/neutral-back.png">Neutral</option>
+            </select>
+<!-- city slogan text entry -->
+            <label for="slogan-input">Give your city a slogan</label>
+            <textarea id="slogan-input"></textarea>
+        </section>
+
+        <!-- image and background display section -->
+        <section id="image-background-display" class="neutral">
+<!-- header targeted by text display input -->
+            <h2>New City</h2>
+            <div class="container">
+                <!-- image targeted by image switcher -->
+                <img class="top-image" src="assets/city-sun.png">
+                <img class="back-image" src="assets/sunny-back.png">
+            </div>
+<!-- textarea targeted by city slogan entry -->
+            <section class="slogan-display" id="slogan-text-area">
+                <button>save your city!</button>
+                <label>Your Cities</label>
+                <span id="city-count">0</span>
+                <ul>
+                    <li id="slogan-display">Welcome to our fair city!</li>
+                </ul>
+            </section>
+        </section>
 
     </main>
 

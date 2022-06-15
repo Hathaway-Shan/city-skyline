@@ -1,1 +1,81 @@
 /* add css for index.html */
+main {
+    display: grid;
+/* this is the map image on the back of the page */
+    background: url('https://alamedahistory.files.wordpress.com/2021/02/pittmons-1915-map-detail.png') blue no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@media (min-width: 400px) {
+    main {
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+        text-align: center;
+    }
+}
+
+#image-select {
+    background-color: #869291;
+    padding: 20px;
+    border: 8px solid rgb(85, 89, 90)
+}
+
+#image-display {
+    justify: center;
+}
+
+label, input, select, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+/* this code contains the image overlay display */
+.container {
+    position: relative;
+}
+
+div {
+    display: grid;
+    place-items: center;
+}
+
+.back-image {
+    width: 100px;
+    width: 500px;
+    height: 400px;
+}
+
+.top-image {
+    position: absolute;
+}
+/* this code deals with the properties of the text display section under the image */ 
+#slogan-text-area {
+    grid-area: phrases;
+}
+
+.slogan-display {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.slogan-display li {
+    position: relative;
+    background-color: aqua;
+    border: 1px;
+    border-color: black;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0 10px 20px;
+}
+
+/* these are the background themes */
+    .neutral {
+        background: #e19a36;
+        color: #49281F;
+        border: 8px solid #894b18;
+        font-family: 'Gwendolyn';
+        font-size: 1.4rem;
+    }
